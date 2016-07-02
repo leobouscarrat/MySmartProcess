@@ -61,21 +61,7 @@ $(function() {
         resize: true
     });
 
-    Morris.Donut({
-        element: 'morris-donut-chart',
-        data: [{
-            label: "Download Sales",
-            value: 12
-        }, {
-            label: "In-Store Sales",
-            value: 30
-        }, {
-            label: "Mail-Order Sales",
-            value: 20
-        }],
-        resize: true
-    });
-
+  
     Morris.Bar({
         element: 'morris-bar-chart',
         data: [{
@@ -110,6 +96,130 @@ $(function() {
         xkey: 'y',
         ykeys: ['a', 'b'],
         labels: ['Series A', 'Series B'],
+        hideHover: 'auto',
+        resize: true
+    });
+
+
+    Morris.Area({
+        element: 'morris-area-chartTemp',
+        data: [{
+            period: '2010 Q1',
+            temperature : 26
+        }, {
+            period: '2010 Q2',
+            temperature : 25
+        }, {
+            period: '2010 Q3',
+            temperature : 22
+        }, {
+            period: '2010 Q4',
+            temperature : 24
+        }, {
+            period: '2011 Q1',
+            temperature : 27
+        }, {
+            period: '2011 Q2',
+            temperature : 34
+        }, {
+            period: '2011 Q3',
+            temperature : 37
+        }, {
+            period: '2011 Q4',
+            temperature : 38
+        }, {
+            period: '2012 Q1',
+            temperature : 24
+        }, {
+            period: '2012 Q2',
+            temperature : 25
+        }],
+        xkey: 'period',
+        ykeys: ['temperature'],
+        labels: ['Température'],
+        pointSize: 2,
+        hideHover: 'auto',
+        resize: true
+    });
+
+        Morris.Area({
+        element: 'morris-area-chartQual',
+        data: [{
+            period: '2010 Q1',
+            Purete : 85
+        }, {
+            period: '2010 Q2',
+            Purete : 82
+        }, {
+            period: '2010 Q3',
+            Purete : 80
+        }, {
+            period: '2010 Q4',
+            Purete : 89
+        }, {
+            period: '2011 Q1',
+            Purete : 78
+        }, {
+            period: '2011 Q2',
+            Purete : 75
+        }, {
+            period: '2011 Q3',
+            Purete : 77
+        }, {
+            period: '2011 Q4',
+            Purete : 86
+        }, {
+            period: '2012 Q1',
+            Purete : 89
+        }, {
+            period: '2012 Q2',
+            Purete : 81
+        }],
+        xkey: 'period',
+        ykeys: ['Purete'],
+        labels: ['Pureté du mélange'],
+        pointSize: 2,
+        hideHover: 'auto',
+        resize: true
+    });
+
+    Morris.Area({
+        element: 'morris-area-chartHygro',
+        data: [{
+            period: '2010 Q1',
+            Hygrometrie : 35
+        }, {
+            period: '2010 Q2',
+            Hygrometrie : 40
+        }, {
+            period: '2010 Q3',
+            Hygrometrie : 42
+        }, {
+            period: '2010 Q4',
+            Hygrometrie : 38
+        }, {
+            period: '2011 Q1',
+            Hygrometrie : 47
+        }, {
+            period: '2011 Q2',
+            Hygrometrie : 40
+        }, {
+            period: '2011 Q3',
+            Hygrometrie : 32
+        }, {
+            period: '2011 Q4',
+            Hygrometrie : 28
+        }, {
+            period: '2012 Q1',
+            Hygrometrie : 31
+        }, {
+            period: '2012 Q2',
+            Hygrometrie : 37
+        }],
+        xkey: 'period',
+        ykeys: ['Hygrometrie'],
+        labels: ['Hygrométrie'],
+        pointSize: 2,
         hideHover: 'auto',
         resize: true
     });
